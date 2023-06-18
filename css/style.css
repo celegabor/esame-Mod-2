@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.m-10px{
+    margin: 10px;
+}
+
+.display-none{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+
+.bgButton{
+    background-color: aqua;
+}
+.filterButton{
+    filter: drop-shadow(2px 2px 2px white);
+}
+.black{
+    color: black;
+}
+#titolo{
+    color: greenyellow;
+    margin-bottom: 20px;
+    border-bottom: 3px solid green;
+    font-size: 1.4em;
+}
+
+#h3{
+    color: rgb(80, 97, 54);
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    text-align: center;
+    width: 60%;
+}
+
+#ricerca{
+    width: 100vw; 
+    height: 100vh; 
+    background-color: black; 
+    color: white; 
+    justify-content: center; 
+    align-items: center;
+    padding: 50px;
+}
+
+#searchSection{
+    width: 50%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-left: -50px;
+}
+
+#containResult{
+    width: 50%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+#containResult{
+    padding: 30px;
+    border-top: 10px solid aqua;
+    border-left: 1px solid aqua;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: auto;
+}
+
+#buttonSearch{
+    width: 100px; 
+    height: 40px; 
+    background-color: rgb(34, 99, 28);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#buttonSearch:hover {
+    background-color: rgb(9, 127, 40);
+    filter: drop-shadow(0 0 14px rgb(14, 137, 18));
+    font-weight: 800;
+    scale: 1.2;
+    border: 3px solid gray;
+}
+
+.input{
+    width: 40%;
+    text-align: center;
+    background-color: rgb(22, 68, 53);
+    height: 30px;
+}
+.input:hover{
+    background-color: rgb(20, 98, 57);
+    border: 1px solid white;
+    border: 2px solid black;
+    filter: drop-shadow(2px 2px 2px white);
+    scale: 1.1;
+}
+.input:focus{
+    background-color: rgb(15, 50, 53);
+    color: white;
+    border: 2px solid white;
+    scale: 1.1;
+
+}
+
+#h1positive{
+    color: rgb(17, 200, 17);
+    text-align: center;
+    padding: 10px;
+}
+
+#h1negative{
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+#resultSection{
+    margin-top: 30px;
+}
+
+#resultSection li:nth-child(odd){
+    background-color: rgb(19, 44, 22);
+    border-bottom: 5px solid gray;
+}
+#resultSection li:nth-child(even){
+    background-color: rgb(29, 75, 36);
+    border-bottom: 5px solid gray;
+
+}
+
+#result{
+    list-style-type: square;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 1100px) {
+    #ricerca{
+        font-size: 0.8em;
+    }
+    .input{
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .input{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #h1positive{
+        margin-top: 10px;
+    }
+
+    #titolo{
+        font-size: 1.1em;
+    }
+
+    #conto{
+        font-size: 0.8em;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    #ricerca{
+        padding: 30px;
+        flex-direction: column;
+    }
+    #searchSection, #containResult{
+        width: 80vw;
+    }
+    #searchSection{
+        margin-left: 0;
+    }
+
+    #titolo{
+        font-size: 1.4em;
+    }
+
+    #conto{
+        font-size: 0.8em;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .input{
+        width: 180px
+    }
+    #titolo{
+        font-size: 1.05em;
+    }
+}
+@media screen and (max-width: 300px) {
+    #titolo{
+        font-size: 0.8em;
+    }
+}

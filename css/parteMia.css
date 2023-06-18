@@ -1,0 +1,134 @@
+
+
+#duePag{
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    background-color: black;
+    position: sticky;
+    top: 10px;
+    left: 10px;
+    filter: drop-shadow(1px 1px 3px aqua);
+}
+
+#pIniziale{
+    color: rgb(231, 95, 95);
+    height: 100%;
+    width: 70%;
+    padding: 50px;
+}
+.pag{
+    width: 10%;
+    padding: 5px;
+    height: 50px;
+    background-color: rgb(12, 12, 71);
+    color: white;
+    transition: all 0.1s linear;
+    margin-left: 20px;
+}
+
+.effettoBottone{
+    border-radius: 20px;
+    border-bottom: 4px solid aqua;
+    border-left: 2px solid aqua;
+    background-color: rgb(27, 27, 166);
+    scale: 1.1;
+}
+
+.pag:hover{
+    background-color: rgb(55, 69, 160);
+    color: white;
+    font-weight: 800;
+    scale: 1.2;
+}
+
+#inserimento{
+    width: 100vw;
+    padding: 100px; 
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#searchSection{
+    width: 100%;
+}
+
+#titoloInserisci{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    color: rgb(103, 12, 103);
+}
+
+#h3Inserisci{
+    font-size: 0.7em;
+    width: 100%;
+    text-align: center;
+    color: violet;
+    margin: 10px 0 20px 0;
+}
+
+#buttonSearchInserisci{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(99, 62, 11);
+    margin: 20px 0;
+}
+#buttonSearchInserisci:hover{
+    background-color: rgb(157, 57, 4);
+    filter: drop-shadow(0 0 10px red);
+    font-weight: 800;
+    scale: 1.2;
+    border: 2px solid gray;
+
+}
+
+#mex{
+    padding: 5px;
+    margin-top: 20px;
+    color: greenyellow;
+    border: 10px solid rgb(24, 170, 48);
+}
+
+#allertInserimento{
+    color: red;
+    font-size: 1.4em;
+    padding: 10px;
+    border-bottom: 3px solid blue;
+}
+
+@media screen and (max-width: 700px) {
+    .pag{
+        width: 100px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #titoloInserisci{
+        font-size: 0.8em;
+    }
+    
+    #h3Inserisci{
+        font-size: 0.5em;
+    }
+    #postoInserisci{
+        font-size: 0.7em;
+    }
+
+    #duePag{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #bottone1, #bottone2{
+        scale: 0.7;
+        margin-left: 0;
+    }
+    #pIniziale{
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 400px) {
+    #inserimento{
+        padding: 60px 20px;
+    }
+}

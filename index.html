@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parteMia.css">
+    <title>Prova modulo2</title>
+</head>
+<body style="background-color: black;">
+
+<!-- sezione 2 bottoni scelta pag -->
+
+    <div id="duePag">
+
+        <!-- #1 -->
+
+        <button onclick="pag1()" class="pag" id="bottone1">Ricerca <br> lavoro</button>
+
+        <!-- #2 -->
+
+        <button onclick="pag2()"  class="pag" id="bottone2">Inserisci <br> lavoro</button>
+
+    </div>
+<!-- fine sezione 2 bottoni scelta pag -->
+
+
+<!-- mesaggio spiegazione che poi sparisce -->
+    <p id="pIniziale" class="flex">Ho deciso di creare un sezione in più per mettermi alla prova. <br>  <br> Nella sezione "Ricerca lavoro" c'è l'esercizio che dovevo svolgere per il secondo modulo, dove si possono inserire i due campi di ricerca e che che fa tornare il risultato contenente il numero di lavori trovati e i lavori effettivi. (se non vengono inseriti entrambi correttamento ritorna un errore) <br>  <br> La sezione che ho creato in più contiene i due parametri da inserire correttamente, altrimenti da errore,. Al caricamento completato correttamente da una stringa per confermare il caricamento.<br>  <br> (i due campi vengono trasformati in un oggetto che poi viene inserito nell'array 'jobs') <br>  <br> Cliccando su uno dei due tasti questo messaggio sparirà. <br>  <br> Si può, in seguito, andare nella sezione 'Ricerca' e cercare il lavoro appena inserito. <br>  <br> L'intero sito si adatta a tutti gli schermi da un minimo di 250px.
+    </p>
+
+<!-- fine mesaggio spiegazione che poi sparisce -->
+
+
+<!--  sezione ricerca lavoro -->
+
+    <section id="ricerca" class="display-none">
+
+    <!-- sezione sx dove inserisci i campi -->
+
+        <section id="searchSection">
+
+            <!-- titolo -->
+            <h1 id="titolo">Qui trovi la sezione di ricerca del lavoro.</h1>
+
+            <!-- sottotitolo -->
+            <h3 id="h3">
+                Inserisci il nome del lavoro che stai cercando, il posto dove lo vorresti e consulta tutte i posti che abbiamo disponibili
+            </h3>
+
+            <!-- scritta LAVORO -->
+            <p class="m-10px">LAVORO</p>
+
+            <!-- campo input text NOME LAVORO -->
+            <input class="input" placeholder="inserisci il lavoro" id="nome" type="text" name="nome" > 
+
+            <!-- scritta POSTO -->
+            <p class="m-10px">POSTO</p>
+
+            <!-- campo input text POSTO LAVORO -->
+            <input class="input" placeholder="inserisci il luogo del lavoro" id="posto" type="text" name="posto" >
+
+            <!-- bottone CERCA onclick SAVE() -->
+            <button id="buttonSearch" value="search" onclick="save(event)" > cerca</button>
+
+        </section>
+
+    <!-- sezione dx dove escono i risultati trovati -->
+    
+        <section id="containResult">
+
+            <!-- lista non ordinata a cui vengono appesi i nuovi child creati da JS -->
+
+            <ul id="resultSection">
+
+            </ul>
+
+        </section>
+
+    </section>
+<!-- fine sezione ricerca lavoro -->
+<!-- ------------------------------------ -->
+<!-- inizio sezione inserimento lavoro -->
+
+    <section id="inserimento" class="display-none">
+
+        <!-- sezione dove inserisci il lavoro da offrire -->
+        <section id="searchSection">
+
+            <!-- titolo -->
+            <h1 onclick="removeMx()"  id="titoloInserisci">Qui trovi la sezione di INSERIMENTO di una posizione di lavoro.</h1>
+
+            <!-- sottotitolo -->
+            <h3 onclick="removeMx()"  id="h3Inserisci">
+                Inserisci i dati nei campi rischiesti per inserire correttamente la tua richiesta
+            </h3>
+
+            <!-- scritta LAVORO  -->
+            <p onclick="removeMx()"  class="m-10px">LAVORO</p>
+
+            <!-- campo input text NOME LAVORO -->
+            <input onclick="removeMx()"  class="input" placeholder="inserisci il lavoro" id="nomeInserisci" type="text" name="nome" > 
+
+            <!-- scritta POSTO -->
+            <p onclick="removeMx()"  class="m-10px">POSTO</p>
+            
+            <!-- campo input text POSTO LAVORO -->
+            <input onclick="removeMx()"  class="input" placeholder="luogo del lavoro" id="postoInserisci" type="text" name="posto" >
+
+            <!-- bottone INSERISCI onclick INPUT() -->
+            <button  id="buttonSearchInserisci" value="search" onclick="input(event)" > INSERISCI</button>
+
+            <!-- scritta ALLERT messaggio di avvertimento -->
+            <p class="display-none" id="allertInserimento">ATTENTO!!! non hai inserito correttamente i campi richiesti</p>
+
+            <!-- scritta MEX messaggio di caricamento andato a buon fine -->
+            <p id="mex" class="display-none">COMPLIMENTI!!! HAI INSERITO IL TUO POSTO DI LAVORO CORRETTAMENTE. Ora vai nella sezione di ricerca lavoro per verificare se trovi il tuo lavoro appena inserito!!!</p>
+
+        </section>
+
+    </section>
+
+<!-- fine sezione inserimento lavoro -->
+    <script src="scaricabile.js"></script>
+</body>
+</html>
